@@ -1,3 +1,9 @@
-import validator from './validator.js';
+function saveCardNumber() {
+    const saveNumber = parseInt(document.getElementById('cardNumber').nodeValue);
+    alert('mostrar'+saveNumber);
+}
 
-console.log(validator);
+//import validator from './validator.js';
+
+
+//console.log(validator);
