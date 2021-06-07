@@ -1,12 +1,119 @@
-main{
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 500px;
-    font-size: 80px;
-    background: #a1e0dd;
-    border-radius: 10px;
-    margin: 1px;
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family:'Times New Roman', Times, serif;
+    background: whitesmoke;
+}
+
+h1{
     text-align: center;
+    margin: 20px 0px 20px;
+}
+main {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 10px 40px;
+    width: max-content;
+}
+.cardForm{
+    background: #a1e0dd;
+    width: max-content;
+    display: grid;
+    gap: 25px;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 37px;;
+    border:none;
+}
+
+.labelStyle{
+    display:block;
+    font-weight: 700;
+    padding: 0px;
+    cursor: pointer;
+}
+span{
+    margin-bottom: 10px;
+}
+.input-group{
+    position: relative;
+    max-height: 50px;
+}
+
+.input-box{
+    width: 100%;
+    background: white;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 30px 0 20px;
+    transition: .3s ease all;
+}
+
+.input-box:focus {
+    border: 3px solid #0075ff;
+    outline: none;
+}
+.form-validation-estate {
+    position: relative;
+    right: 16px;
+    bottom: 12px;
+    z-index: 1;
+    font-size: 20px;
+    opacity: 0;
+}
+#validationIcon{
+    opacity: 2;
+    bottom: 32px;
+    left: 467px;
+    z-index: 1;
+}
+.form-group2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0px 60px;
+}
+.form-errorMessage {
+    font-size:12px;
+    margin-bottom: 0;
+    display:none;
+    margin-top: 5px ;
+}
+
+#payButton{
+    background: black;
+    color:white;
+    border-radius: 5px;
+    border:none;
+    font-size: medium;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    cursor: pointer;
+}
+.form-group{
+    padding: 0px 60px;
+}
+.form-button{
+    padding: 0px 205px;
+}
+
+#showMaskify{
+    position: relative;
+    text-align: start;
+    margin:0;
+    width: 60%;
+    z-index: 1;
+    top: -50px;
+    left: 5px;
+    padding: 0 23px;
+    background-color: white;
+    font: 400 13.3333px Arial;
+    display: none; 
+    letter-spacing: normal;
+
 }
