@@ -1,119 +1,223 @@
-* {
+*{
     box-sizing: border-box;
 }
-body {
-    font-family:'Times New Roman', Times, serif;
-    background: whitesmoke;
+head {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-h1{
+header {
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 60px;
+}
+h1 {
+    position: absolute;
+    box-sizing: content-box;
+    margin:0;
+    width: 130px;
+    height: 130px;
+    border: 5px solid white;
+    border-radius: 100px;
+    background: #4A9B9B;
     text-align: center;
-    margin: 20px 0px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    top:-3px;
+    z-index: 1;
 }
 main {
-    max-width: 800px;
-    width: 90%;
-    margin: auto;
-    padding: 10px 40px;
-    width: max-content;
-}
-.cardForm{
-    background: #a1e0dd;
-    width: max-content;
-    display: grid;
-    gap: 25px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-bottom: 30px;
-    padding-top: 37px;;
-    border:none;
+    justify-content: center;
+    font-family: sans-serif;
 }
-
-.labelStyle{
-    display:block;
-    font-weight: 700;
-    padding: 0px;
-    cursor: pointer;
+#cardForm{
+    background: #a1e0dd;
+    width: 30em;
+    max-width: 80%;
+    padding: 0 2em 0.5em;
+    border-radius: 1em;
 }
-span{
-    margin-bottom: 10px;
+.cardImage{
+    height: 8em;
+    width: 50%;
+    background-color: lightslategray;
+    margin: 2% 25% 0;
+    border-radius: 1em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0px 13px 8px;
 }
-.input-group{
+.cardImage .logo{
     position: relative;
-    max-height: 50px;
+    width: 25%;
+    height: 25%;
+    background: black;
+    border-radius: 2px;
 }
-
+.form-group {
+    display: block;
+    height: 100px; 
+}
+#inputBoxNumber {
+    position: relative;
+}
+.form-validation-estate{
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    font-size: 1.5em;
+    color: #255050;
+}
+#validationIcon {
+    opacity: 1;
+    right: 10px;
+    top: 11px;
+}
 .input-box{
-    width: 100%;
-    background: white;
-    border: 3px solid transparent;
+    background-color: white;
     border-radius: 5px;
-    height: 45px;
-    line-height: 45px;
-    padding: 0 30px 0 20px;
+    border: 3px solid transparent;
+    height: 2.9em;
+    line-height: 2.9em;
+    font-size: 1em;
+    width: 100%;
     transition: .3s ease all;
+    color: #255050;
+    padding-left: 0.5em;
+    font-family: sans-serif;
 }
-
 .input-box:focus {
-    border: 3px solid #0075ff;
+    border: 3px solid #3f8585;
     outline: none;
 }
-.form-validation-estate {
-    position: relative;
-    right: 16px;
-    bottom: 12px;
-    z-index: 1;
-    font-size: 20px;
-    opacity: 0;
-}
-#validationIcon{
-    opacity: 2;
-    bottom: 32px;
-    left: 467px;
-    z-index: 1;
+.labelStyle{
+    cursor: pointer;
+    font-size: 1em;
+    color: #255050;
+    font-family: sans-serif;
 }
 .form-group2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 0px 60px;
+    gap: 1em;
 }
 .form-errorMessage {
-    font-size:12px;
+    position: relative;
+    display: none;
+    font-size:0.8em;
     margin-bottom: 0;
-    display:none;
-    margin-top: 5px ;
+    margin-top: 0;
+    padding-left: 0.5em;
+    padding-top: 0.1em;
+    color: red;
 }
-
 #payButton{
-    background: black;
+    background: #4A9B9B;
     color:white;
-    border-radius: 5px;
+    border-radius: 8px;
     border:none;
-    font-size: medium;
+    font-size: 1.5em;
     width: 200px;
     height: 50px;
-    align-items: center;
     cursor: pointer;
+    margin: 0 25%;
 }
-.form-group{
-    padding: 0px 60px;
-}
-.form-button{
-    padding: 0px 205px;
-}
-
-#showMaskify{
-    position: relative;
-    text-align: start;
-    margin:0;
-    width: 60%;
+.overLay{
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
-    top: -50px;
-    left: 5px;
-    padding: 0 23px;
-    background-color: white;
-    font: 400 13.3333px Arial;
-    display: none; 
-    letter-spacing: normal;
+    visibility: hidden;
+}
+.overLay.active{
+    visibility: visible;
+}
+.popUp{
+    background: white;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,.3);
+    border-radius: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px 10px 10px;
+    text-align: center;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    transition: .3s ease all;
+    transition: scale(0.7);
+    opacity: 0;
+}
+.popUp.active{
+    opacity: 1;
+    transform: scale(1);
 
+}
+.popUp .btnCerrarPopUp {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+
+}
+.popUp .btnCerrarPopUp:hover {
+    color: #255050;
+}
+.popUp h3 {
+    font-size: 1em;
+    font-weight: 600;
+    margin:10px;
+    opacity: 0;
+}
+.popUp.active h3{
+    animation: entryMaskify .5s ease .5s forwards;
+}
+@keyframes entryMaskify {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.popUp h4 {
+    display: block;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    height: 20px;
+    width: 50%;
+    line-height: 20px;
+    background:transparent;
+    margin: 10px 25%;
+    opacity: 0;  
+}
+
+.popUp.active h4{
+    animation: entryisValid .5s ease .5s forwards;
+}
+@keyframes entryisValid {
+    from {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
