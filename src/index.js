@@ -69,14 +69,21 @@ function numberClean () {
 validationIcon.addEventListener('click',numberClean);
 
 //Que muestre el logo cambiado cuando se escriba la primera letra
-
-//let imgLogo = document.getElementById('logo');
-/*function showLogo(cardNumber) {
-    validator.changeLogo(cardNumber);
-  
-  //imgLogo.src = 'img/logos/' + (validator.changeLogo(cardNumber) || 'something')+ '.png';// cambiar la imagen del logo en el DOM
-
+function showLogo() {
+const imgLogo = document.getElementById('logo');
+const cardNumber = inputNumber.value;
+imgLogo.src = 'img/logos/' + (validator.changeLogo(cardNumber) || 'something')+ '.png';// cambiar la imagen del logo en el DOM
 }
-inputNumber.addEventListener('click', showLogo);*/
+inputNumber.addEventListener('change', showLogo);
+
+//Mostrar el input de cardNumber en la tarjeta de imagen
+const imageCardNumber = document.getElementById('imageCardNumber');
+function showCardNumberImage(e) {
+  imageCardNumber.textContent = e.target.value;
+}
+inputNumber.addEventListener('keyup',showCardNumberImage);
+
+
+
 
 

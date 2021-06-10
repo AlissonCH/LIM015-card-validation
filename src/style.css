@@ -46,20 +46,35 @@ main {
 .cardImage{
     height: 8em;
     width: 50%;
-    background-color: lightslategray;
+    background-image: url(./img/bg-tarjeta/bg-tarjeta-01.jpg);
     margin: 2% 25% 0;
     border-radius: 1em;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 0px 13px 8px;
+    padding: 40px 13px 8px;
+    flex-direction: column;
 }
 .cardImage .logo{
     position: relative;
     width: 25%;
-    height: 25%;
-    background: black;
+    height: 30%;
+    background-image: url(./img/logos/something.png);
     border-radius: 2px;
+    left: 136px;
+    bottom: 27px;
+    z-index: 1;
+}
+.cardImage .chip{
+    width: 20%;
+    height: 30%;
+    border-radius: 2px;
+}
+.cardImage .imageCardNumber{
+    height: fit-content;
+    margin: 2px 0;
+}
+.cardImage .imageDate{
+    height: fit-content;
+    width: 50%;
 }
 .form-group {
     display: block;

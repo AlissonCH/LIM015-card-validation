@@ -23,9 +23,16 @@ const validator = {
     const newNumber = maskifyFirstDigits + lastFourDigits; // string final con la enmascaración menos de los últimos 4.
     return newNumber; // string final con la enmascaración menos de los últimos 4.
   },
-  /*changeLogo: function(cardNumber){
-    
-    console.log(cardNumber = cardNumber.split(' ').join(" "));
-}*/
+  changeLogo: function(cardNumber){
+    if(cardNumber[0]==='4'){
+      return 'visa';
+    } else if (cardNumber[0]==='5'){
+      return 'mastercard';
+    } else if (cardNumber[0]==='6'){
+      return 'discoveryCard'
+    } else if (cardNumber[0]==='3'){
+      return 'americanExpress'
+    }
+}
 }
 export default validator;
