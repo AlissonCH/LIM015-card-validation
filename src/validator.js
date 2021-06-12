@@ -32,6 +32,8 @@ const validator = {
       return 'discoveryCard'
     } else if (cardNumber[0]==='3'){
       return 'americanExpress'
+    }else{
+      return 'something';
     }
 }
 }

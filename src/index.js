@@ -73,7 +73,7 @@ validationIcon.addEventListener('click',inputClean);
 //Que muestre el logo cambiado cuando se escriba la primera letra
 function showLogo() {
 const cardNumber = inputNumber.value;
-imgLogo.src = 'img/logos/' + (validator.changeLogo(cardNumber) || 'something')+ '.png';// cambiar la imagen del logo en el DOM
+imgLogo.src = 'img/logos/' + (validator.changeLogo(cardNumber))+ '.png';// cambiar la imagen del logo en el DOM
 }
 inputNumber.addEventListener('change', showLogo);
 
