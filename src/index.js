@@ -1,11 +1,5 @@
 import validator from './validator.js';
-const payButton = document.getElementById('payButton');
 const inputNumber = document.getElementById('inputNumber');
-const errorText = document.getElementById('errorMessage');
-const validationIcon = document.getElementById('validationIcon');
-const imageCardNumber = document.getElementById('imageCardNumber');
-const imageDate = document.getElementById('imageDate');
-const imgLogo = document.getElementById('logo');
 
 //Muestra ventana PopUp
 const overLay = document.getElementById('overLay');
@@ -24,6 +18,8 @@ closePopUp.addEventListener('click',function(){
 });
 
 //función que muestra el validador y el maskify en el popUp
+const payButton = document.getElementById('payButton');
+const errorText = document.getElementById('errorMessage');
 function validateAndMaskify() {
   const cardNumber = inputNumber.value;
   if(/^\d{13,18}$/.test(cardNumber)) {
@@ -61,6 +57,7 @@ const showErrorText = () => {
 inputNumber.addEventListener('blur', showErrorText);
 
 //icono "x" limpia el Nº de tarjeta y el mensaje de error
+const validationIcon = document.getElementById('validationIcon');
 function inputClean () {
   errorText.style.display='none';
   inputNumber.value = '';
@@ -71,6 +68,7 @@ function inputClean () {
 validationIcon.addEventListener('click',inputClean);
 
 //Que muestre el logo cambiado cuando se escriba la primera letra
+const imgLogo = document.getElementById('logo');
 function showLogo() {
 const cardNumber = inputNumber.value;
 imgLogo.src = 'img/logos/' + (validator.changeLogo(cardNumber))+ '.png';// cambiar la imagen del logo en el DOM
@@ -78,14 +76,16 @@ imgLogo.src = 'img/logos/' + (validator.changeLogo(cardNumber))+ '.png';// cambi
 inputNumber.addEventListener('change', showLogo);
 
 //Mostrar el input Nº de tarjeta en cardImage
+const imageCardNumber = document.getElementById('imageCardNumber');
 function showImageCardNumber(e) {
-  imageCardNumber.textContent = validator.maskify(e.target.value);
+  imageCardNumber.textContent = validator.maskify((e.target.value).match(/\d/g).join(''));
 }
 inputNumber.addEventListener('keyup',showImageCardNumber);
 
 //Mostrar la fecha en cardImage
+const imageDate = document.getElementById('imageDate');
 function showImageDate(e) {
-  imageDate.textContent = e.target.value;
+  imageDate.textContent = (e.target.value);
 }
 const inputDate = document.getElementById('date');
 inputDate.addEventListener('keyup',showImageDate);
