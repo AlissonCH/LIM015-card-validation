@@ -80,9 +80,11 @@ Mi primer prototipo en papel
 
 ### Acciones en específico que realicé para cumplir con los OA
 
-* [] Investigar y aprender por las noches y fines de semana sobre nuevas funcionalidades en Javascript, HTML y CSS.
-* [] Llevar cursos básicos en Javascript y HTML
-* [] Preguntar a los coachs y a mis compañeras cada vez que me surgían dudas.
+* [ ] Investigar y aprender por las noches y fines de semana sobre nuevas funcionalidades en Javascript, HTML y CSS.
+* [ ] Llevar cursos básicos en Javascript y HTML
+* [ ] Preguntar a los coachs y a mis compañeras cada vez que me surgían dudas.
+* [ ] Organizar mis tareas en Trello según los Objetivos de Aprendizaje que faltaban profundizar.
+
 #### Meta: profundización de los OA
 #### Plazo: fin del primer proyecto
 
@@ -90,5 +92,7 @@ Mi primer prototipo en papel
 
 ![Interfaz del proyecto final](./src/img/interfaz_final_1.jpg)
 
-![Interfaz del proyecto final con validación](./src/img/interfaz_final_2.jpg)
+![Interfaz del proyecto final 2](./src/img/interfaz_final_3.jpg)
+
+![Interfaz del proyecto final 3](./src/img/interfaz_final_2.jpg)
 
