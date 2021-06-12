@@ -79,9 +79,10 @@ inputNumber.addEventListener('change', showLogo);
 
 //Mostrar el input Nº de tarjeta en cardImage
 function showImageCardNumber(e) {
-  imageCardNumber.textContent = e.target.value;
+  imageCardNumber.textContent = validator.maskify(e.target.value);
 }
 inputNumber.addEventListener('keyup',showImageCardNumber);
+
 //Mostrar la fecha en cardImage
 function showImageDate(e) {
   imageDate.textContent = e.target.value;

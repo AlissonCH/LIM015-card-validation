@@ -208,7 +208,7 @@ main {
     color: #4A9B9B;
 }
 .popUp.active h3{
-    animation: entryMaskify .5s ease .5s forwards;
+    animation: entryMaskify .3s ease .5s forwards;
 }
 @keyframes entryMaskify {
     from {
@@ -232,9 +232,8 @@ main {
     margin: 10px 25%;
     opacity: 0;  
 }
-
 .popUp.active h4{
-    animation: entryisValid .5s ease .5s forwards;
+    animation: entryisValid .3s ease .5s forwards;
 }
 @keyframes entryisValid {
     from {
