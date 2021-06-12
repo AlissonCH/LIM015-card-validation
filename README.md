@@ -90,3 +90,5 @@ Mi primer prototipo en papel
 
 ![Interfaz del proyecto final](./src/img/interfaz_final_1.jpg)
 
+![Interfaz del proyecto final con validación](./src/img/interfaz_final_2.jpg)
+
