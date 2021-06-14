@@ -12,7 +12,7 @@ function overLayFx(){
 }
 //cierra venta PopUp
 closePopUp.addEventListener('click',function(){
-  overLay.classList.remove('active')
+  overLay.classList.remove('active');
   popUp.classList.remove('active');
 });
 
@@ -63,6 +63,7 @@ function inputClean () {
   inputNumber.style.borderColor = '#3f8585';
   imageCardNumber.textContent = '';
   imgLogo.src = 'img/logos/something.png';
+  
 } 
 validationIcon.addEventListener('click',inputClean);
 

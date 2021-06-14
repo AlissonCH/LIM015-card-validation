@@ -27,8 +27,9 @@ const validator = {
     }
     return acum + cardNumber.slice(cardNumber.length-4);
   },
+
   changeLogo: function(cardNumber){
-  
+
     if(/^4/.test(cardNumber)){
       return 'visa';
     } else if (/^5/.test(cardNumber)){
@@ -41,6 +42,7 @@ const validator = {
       return 'something';
     }
   }
+
 };
 export default validator;
 
