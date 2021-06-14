@@ -27,15 +27,15 @@ const validator = {
     }
     return acum + cardNumber.slice(cardNumber.length-4);
   },
-  
   changeLogo: function(cardNumber){
-    if(cardNumber[0]==='4'){
+  
+    if(/^4/.test(cardNumber)){
       return 'visa';
-    } else if (cardNumber[0]==='5'){
+    } else if (/^5/.test(cardNumber)){
       return 'mastercard';
-    } else if (cardNumber[0]==='6'){
+    } else if (/^6/.test(cardNumber)){
       return 'discoveryCard';
-    } else if (cardNumber[0]==='3'){
+    } else if (/^3/.test(cardNumber)){
       return 'americanExpress';
     }else{
       return 'something';

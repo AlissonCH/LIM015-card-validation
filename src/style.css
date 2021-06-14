@@ -43,7 +43,7 @@ main {
     padding: 0 2em 0.5em;
     border-radius: 1em;
 }
-.cardImage{
+.card-image{
     height: 8em;
     width: 50%;
     background-image: url(./img/bg-tarjeta/bg-tarjeta-01.jpg);
@@ -55,7 +55,7 @@ main {
     flex-direction: column;
     box-shadow: 0px 0px 4px 0px rgba(0,0,0,.3);
 }
-.cardImage .logo{
+.card-image .logo{
     position: relative;
     width: 27%;
     background-image: url(./img/logos/something.png);
@@ -64,18 +64,18 @@ main {
     bottom: 30px;
     z-index: 1;
 }
-.cardImage .chip{
+.card-image .chip{
     width: 20%;
     height: 30%;
     border-radius: 2px;
     margin-bottom: 4px;
 }
-.cardImage .imageCardNumber{
+.card-image .imageCardNumber{
     height: 10px;
     margin: 2px 0;
     color: #8d7475;
 }
-.cardImage .imageDate{
+.card-image .imageDate{
     height: fit-content;
     width: 50%;
     color: #8d7475;
@@ -122,13 +122,13 @@ main {
     border: 3px solid #3f8585;
     outline: none;
 }
-.labelStyle{
+.label-style {
     cursor: pointer;
     font-size: 1em;
     color: #255050;
     font-family: sans-serif;
 }
-.form-group2 {
+.form-group-two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
@@ -154,7 +154,7 @@ main {
     cursor: pointer;
     margin: 0 25%;
 }
-.overLay{
+.over-lay{
     background: rgba(0,0,0,.3);
     position: fixed;
     top: 0;
@@ -167,13 +167,13 @@ main {
     z-index: 1;
     visibility: hidden;
 }
-.overLay.active{
+.over-lay.active{
     visibility: visible;
 }
 .popUp{
     background: white;
     box-shadow: 0px 0px 4px 0px rgba(0,0,0,.3);
-    border: 3px solid #4A9B9B;
+    border: 1px solid #4A9B9B;
     border-radius: 10px;
     font-family: 'Times New Roman', Times, serif;
     padding: 0px 10px 10px;

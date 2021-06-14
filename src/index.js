@@ -10,7 +10,6 @@ function overLayFx(){
   overLay.classList.add('active');
   popUp.classList.add('active');
 }
-
 //cierra venta PopUp
 closePopUp.addEventListener('click',function(){
   overLay.classList.remove('active')

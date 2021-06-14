@@ -11,7 +11,7 @@
     </header>
     <main>
       <form id="cardForm">
-        <section class="cardImage">
+        <section class="card-image">
           <img src="img/chip-tarjeta.png" class="chip">
           <p class="imageCardNumber" id="imageCardNumber">................</p>
           <p class="imageDate" id="imageDate">00/0000</p>
@@ -19,7 +19,7 @@
         </section>
 
         <section class="form-group">
-          <label class="labelStyle" for="inputNumber" id="inputNumber-group">Nº de tarjeta</label>
+          <label class="label-style" for="inputNumber" id="inputNumber-group">Nº de tarjeta</label>
             <div id="inputBoxNumber">
             <input class="input-box" id="inputNumber" type="text" name="inputNumber" autocomplete="off" placeholder="1234000000000000" minlength="13" maxlength="18">
             <i id="validationIcon" class="form-validation-estate fas fa-times-circle"></i>
@@ -28,21 +28,21 @@
         </section>
 
         <section class="form-group">
-            <label class="labelStyle" for="inputName">Nombre y Apellido</label>
+            <label class="label-style" for="inputName">Nombre y Apellido</label>
             <input class="input-box" id="inputName" type="text" placeholder="Nombre y apellido" autocomplete="off">
             <i class="form-validation-estate fas fa-times-circle"></i>
             <p class="form-errorMessage">El nombre sólo contiene letras</p>
         </section>
 
-        <section class="form-group2">
+        <section class="form-group-two-columns">
           <section class="form-group">
-              <label class="labelStyle" for="date">Mes/Año</label>
+              <label class="label-style" for="date">Mes/Año</label>
               <input class="input-box" id="date" type="text" placeholder="00/0000" autocomplete="off">
               <i class="form-validation-estate fas fa-times-circle"></i>
               <p class="form-errorMessage">El nombre sólo contiene letras</p>
           </section>
           <section class="form-group">
-              <label class="input-group2  labelStyle" for="cvc">CVC</label>
+              <label class="label-style" for="cvc">CVC</label>
                 <input class="input-box" id="cvc" type="text" placeholder="CVC" autocomplete="off">
                 <i class="form-validation-estate fas fa-times-circle"></i>
               <p class="form-errorMessage">El nombre sólo contiene letras</p>
@@ -51,7 +51,7 @@
         <button type="button" id="payButton">Pagar S/.___</button>
       </form>
       
-      <section class="overLay" id="overLay">
+      <section class="over-lay" id="overLay">
         <div class="popUp" id="popUp">
           <a href="#" id="btnCerrarPopUp" class="btnCerrarPopUp"><i class="fas fa-times-circle"></i></a>
           <h3 id="showMaskify"></h3>
