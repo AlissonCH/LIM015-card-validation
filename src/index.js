@@ -1,6 +1,5 @@
 import validator from './validator.js';
-const inputNumber = document.getElementById('inputNumber');
-
+const inputNumber = document.querySelector('#inputNumber');
 //Muestra ventana PopUp
 const overLay = document.getElementById('overLay');
 const popUp = document.getElementById('popUp');
@@ -28,11 +27,11 @@ function validateAndMaskify() {
     if(validator.isValid(cardNumber)){
       document.getElementById('resultCardValidation').style.color = 'rgb(0,128,0)';
       document.getElementById('resultCardValidation').innerHTML= `ES VÁLIDA`;
-      buyText.innerText = 'Su compra se está procesando...';
+      buyText.textContent = 'Su compra se está procesando...';
     }else{
       document.getElementById('resultCardValidation').style.color = 'rgb(255,99,71)';
       document.getElementById('resultCardValidation').innerHTML= `NO ES VÁLIDA`;
-      buyText.innerText = 'Por favor vuelva a intentarlo';
+      buyText.textContent = 'Por favor vuelva a intentarlo';
     }
   } else {
     inputNumber.style.borderColor = 'rgb(255,99,71)';
@@ -63,12 +62,11 @@ function inputClean () {
   inputNumber.style.borderColor = '#3f8585';
   imageCardNumber.textContent = '';
   imgLogo.src = 'img/logos/something.png';
-  
 } 
 validationIcon.addEventListener('click',inputClean);
 
 //Que muestre el logo cambiado cuando se escriba la primera letra
-const imgLogo = document.getElementById('logo');
+const imgLogo = document.querySelector('.logo');
 function showLogo() {
 const cardNumber = inputNumber.value;
 imgLogo.src = 'img/logos/' + (validator.changeLogo(cardNumber))+ '.png';// cambiar la imagen del logo en el DOM
